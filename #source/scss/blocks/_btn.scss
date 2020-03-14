@@ -1,10 +1,14 @@
 //<BUTTONS>====================================================================================================
-.btn{
-	color: #fff;
-	display: inline-block;
-	text-transform: uppercase;
-	text-align: center;
-	&:hover{}
-	&.fw{width: 100%;}
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  @include button-reset;
+  &:hover {
+  }
+  &.fw {
+    width: 100%;
+  }
 }
 //</BUTTONS>====================================================================================================

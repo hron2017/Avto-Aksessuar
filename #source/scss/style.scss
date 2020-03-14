@@ -60,10 +60,63 @@
   -webkit-order: $val;
   order: $val;
 }
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
 //</МИКСИНЫ>===============================================================================================
 
 //<ШРИФТЫ>===============================================================================================
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('../fonts/Lato-Regular.woff2') format('woff2'),
+        url('../fonts/Lato-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'Times New Roman';
+    src: url('../fonts/TimesNewRomanPSMT.woff2') format('woff2'),
+        url('../fonts/TimesNewRomanPSMT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('../fonts/Lato-Bold.woff2') format('woff2'),
+        url('../fonts/Lato-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato-Black';
+    src: url('../fonts/Lato-Black.woff2') format('woff2'),
+        url('../fonts/Lato-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato-Medium';
+    src: url('../fonts/Lato-Medium.woff2') format('woff2'),
+        url('../fonts/Lato-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato-Heavy';
+    src: url('../fonts/Lato-Heavy.woff2') format('woff2'),
+        url('../fonts/Lato-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
 //<Подключаем шрифты>=======================================================================================
 
 //</Подключаем шрифты>=======================================================================================
@@ -76,7 +129,7 @@ $fontfamily: "";
 
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
 $minwidth: 320px;
-$mw: 1170;
+$mw: 1330;
 $md1: $mw + 12;
 $md2: 992.98;
 $md3: 767.98;
@@ -192,6 +245,8 @@ h6 {
   max-width: $mw + px;
   margin: 0 auto;
   width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   @media (max-width: $md1+px) {
     max-width: 970px;
   }
@@ -213,7 +268,7 @@ h6 {
 @import "blocks/_ui";
 @import "blocks/_forms";
 
+@import "blocks/_btn";
+
 @import "blocks/_header";
 @import "blocks/_footer";
-
-
