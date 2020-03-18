@@ -1,0 +1,59 @@
+.order-screen {
+  min-height: 515px;
+  position: relative;
+  @include flexbox();
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    &:after {
+      content: "";
+      background: #000;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.35;
+    }
+  }
+}
+.order-body {
+  position: relative;
+  @include flexbox();
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.order-column {
+  flex: 1 1 50%;
+  @include flexbox();
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.order-title {
+  color: #ffffff;
+  font-family: Lato;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* Text style for "o, n order" */
+  letter-spacing: 0.85px;
+}
+.order-text {
+  color: #ffffff;
+  font-family: Lato;
+  font-size: 15px;
+  font-weight: 400;
+  /* Text style for "This Offer" */
+  letter-spacing: 0.75px;
+}
+.order-btn {
+}
