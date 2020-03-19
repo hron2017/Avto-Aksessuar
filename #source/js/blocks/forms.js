@@ -329,6 +329,7 @@ function forms() {
 		setrating(block, linew);
 	});
 	$('.rating.edit .star').click(function (event) {
+		event.preventDefault();
 		var block = $(this).parents('.rating');
 		var re = $(this).index() + 1;
 		block.find('input').val(re);

@@ -7,7 +7,6 @@
   font-family: Lato;
   font-size: 20px;
   font-weight: 700;
-  /* Text style for "B, uy Now" */
   letter-spacing: 1px;
   padding: 13px 44px;
   background-color: #9c1c28;
@@ -17,6 +16,11 @@
   }
   &.fw {
     width: 100%;
+  }
+
+  @media (max-width: $md4+px) {
+    padding: 7px 27px;
+    font-size: 16px;
   }
 }
 //</BUTTONS>====================================================================================================

@@ -16,42 +16,44 @@
   align-items: center;
   padding-bottom: 16px;
   border-bottom: 1px solid #595959;
-  &__input {
-    width: 0;
-    padding: 0;
-    left: -250px;
-    background-color: #303030;
 
-    color: #fff;
+  &__form {
+    position: absolute;
+    max-width: 270px;
+    width: 100%;
+    right: -250%;
+    @include anim(0.5s, 0s);
     &.visible {
       position: absolute;
-      left: 65%;
-      width: 100%;
-      max-width: 361px;
-      padding: 3px 20px 3px 10px;
-      @include anim(0.5s, 0s);
-      border: 1px solid #ff3448;
+      right: 0;
     }
   }
-
+  &__row {
+    position: relative;
+  }
+  &__input {
+    padding: 5px 20px 5px 10px;
+    border: 1px solid #ff3448;
+    background-color: #303030;
+    color: #fff;
+  }
   &__btn {
     @include button-reset;
-    width: 23px;
-    height: 24px;
-    padding-left: 48px;
-    position: relative;
-    border-left: 2px solid #595959;
-    color: #ffffff;
-    font-family: "Font Awesome";
+    color: #fff;
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__btn-icon {
     font-size: 25px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    border-radius: initial;
-    .fa-search {
-      position: absolute;
-      top: 0;
-      right: 0;
+    color: #fff;
+    cursor: pointer;
+    border-left: 2px solid #595959;
+    padding-left: 18px;
+
+    @media (max-width: $md4+px) {
+      font-size: 17px;
     }
   }
 }
@@ -72,6 +74,14 @@
     padding-left: 21px;
     position: relative;
     cursor: pointer;
+
+    @media (max-width: $md4+px) {
+      margin-right: 15px;
+      font-size: 12px;
+    }
+    &:hover {
+      color: #b12b38;
+    }
     &:before {
       position: absolute;
       top: 0;
@@ -115,6 +125,21 @@
     padding: 0 20px;
     border-right: 2px solid #595959;
 
+    @media (max-width: $md4+px) {
+      padding: 0 10px;
+    }
+    &:hover {
+      i,
+      span {
+        color: #b12b38;
+      }
+    }
+
+    &:first-child {
+      @media (max-width: $md2+px) {
+        display: none;
+      }
+    }
     &:last-child {
       border-right: none;
       padding-right: 0;
@@ -127,10 +152,21 @@
       text-transform: uppercase;
       /* Text style for "W, ishlist" */
       letter-spacing: 0.75px;
+      @include anim(0.5s, 0s);
+
+      @media (max-width: $md4+px) {
+        font-size: 8px;
+      }
+      @media (max-width: 350px) {
+        font-size: 6px;
+      }
     }
     i {
       font-size: 25px;
       color: #ff3448;
+      @media (max-width: $md4+px) {
+        font-size: 17px;
+      }
     }
     .phone {
       color: #ffffff;
@@ -168,6 +204,9 @@
   font-weight: normal;
   text-transform: uppercase;
   color: #ffffff;
+  @media (max-width: $md4+px) {
+    font-size: 12px;
+  }
   a {
     display: block;
     text-transform: initial;
@@ -178,6 +217,10 @@
     span {
       color: #ff3448;
     }
+
+    @media (max-width: $md4+px) {
+      font-size: 24px;
+    }
   }
 }
 .header-nav {
@@ -187,6 +230,12 @@
   top: 100%;
   left: 0;
   width: 100%;
+
+  @media (max-width: $md3+px) {
+  }
+  @media (max-width: $md4+px) {
+    padding: 14px 0px 8px 10px;
+  }
 }
 .nav {
   &__list {
@@ -197,6 +246,12 @@
     margin-right: 40px;
     &:last-child {
       margin-right: 0;
+    }
+    @media (max-width: $md3+px) {
+      margin-right: 20px;
+    }
+    @media (max-width: $md4+px) {
+      margin-right: 9px;
     }
   }
 
@@ -212,6 +267,13 @@
     &:hover {
       @include anim(0.7s, 0s);
       color: #ff3448;
+    }
+
+    @media (max-width: $md3+px) {
+      font-size: 11px;
+    }
+    @media (max-width: $md4+px) {
+      font-size: 8px;
     }
   }
 }

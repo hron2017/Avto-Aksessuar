@@ -10,7 +10,9 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-
+    @media (min-width: $md2+px) {
+      background-attachment: fixed;
+    }
     &:after {
       content: "";
       background: #000;
@@ -19,7 +21,7 @@
       height: 100%;
       top: 0;
       left: 0;
-      opacity: 0.35;
+      opacity: 0.55;
     }
   }
 }
@@ -29,31 +31,72 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
+
+  @media (max-width: $md3+px) {
+    flex-wrap: wrap;
+  }
 }
 .order-column {
   flex: 1 1 50%;
   @include flexbox();
   flex-direction: column;
-  justify-content: center;
   align-content: center;
   align-items: center;
-}
-.order-title {
   color: #ffffff;
   font-family: Lato;
-  font-size: 40px;
-  font-weight: 700;
-  text-transform: uppercase;
-  /* Text style for "o, n order" */
-  letter-spacing: 0.85px;
-}
-.order-text {
-  color: #ffffff;
-  font-family: Lato;
-  font-size: 15px;
-  font-weight: 400;
-  /* Text style for "This Offer" */
-  letter-spacing: 0.75px;
-}
-.order-btn {
+  position: relative;
+
+  @media (max-width: $md3+px) {
+    flex: 0 1 100%;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  &:first-child {
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 30px;
+      height: 75%;
+      width: 2px;
+      background-color: #fff;
+
+      @media (max-width: $md3+px) {
+        transform: rotate(90deg);
+        right: auto;
+        top: 50%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__sale {
+    font-size: 82px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.75px;
+    margin-bottom: 18px;
+
+    @media (max-width: $md3+px) {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+  }
+  &__oredover {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.85px;
+    margin-bottom: 28px;
+    @media (max-width: $md3+px) {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+  }
+  &__text {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.75px;
+    margin-bottom: 30px;
+  }
 }

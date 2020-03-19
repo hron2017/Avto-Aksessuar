@@ -1,5 +1,5 @@
-$('.header-top__btn').click(function () {
-	$('.header-top__input').toggleClass('visible');
+$('.header-top__btn-icon').click(function () {
+	$('.header-top__form, .header-top__btn').toggleClass('visible');
 });
 function ibg() {
 	$.each($('.ibg'), function (index, val) {

@@ -3,6 +3,11 @@
   padding-top: 86px;
   padding-bottom: 122px;
   text-align: center;
+
+  @media (max-width: $md2+px) {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
 }
 .featured-container {
   max-width: 1400px;
@@ -15,10 +20,14 @@
     font-size: 35px;
     font-weight: 700;
     text-transform: uppercase;
-    /* Text style for "F, eatured" */
     letter-spacing: 1.75px;
     position: relative;
     margin-bottom: 100px;
+
+    @media (max-width: $md3+px) {
+      margin-bottom: 60px;
+      font-size: 24px;
+    }
     &:after {
       content: "";
       position: absolute;
@@ -28,11 +37,20 @@
       left: 50%;
       margin-left: -86px;
       bottom: -28px;
+
+      @media (max-width: $md3+px) {
+        bottom: -12px;
+      }
     }
   }
   &-contant {
     @include flexbox();
     justify-content: space-between;
+
+    @media (max-width: $md2+px) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
 
   &__item {
@@ -44,8 +62,31 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    @include anim(0.5s, 0s);
     //padding: 93px 25px 35px 25px;
     flex: 0 1 18%;
+    &:hover {
+      outline: 2px solid #9c1c28;
+      outline-offset: -10px;
+    }
+    @media (min-width: $md2+px) {
+      &:hover {
+        @include scale(1.1);
+      }
+    }
+
+    @media (max-width: $md2+px) {
+      margin-bottom: 25px;
+      flex: 0 1 30%;
+    }
+    @media (max-width: $md3+px) {
+      flex: 0 1 45%;
+    }
+
+    @media (max-width: 356px) {
+      flex: 0 1 90%;
+    }
   }
 
   &__item--img {
@@ -56,7 +97,7 @@
     justify-content: center;
     margin-bottom: 11px;
 
-    img{
+    img {
       display: block;
       max-width: 100%;
     }
@@ -85,5 +126,3 @@
     margin-top: 22px;
   }
 }
-
-

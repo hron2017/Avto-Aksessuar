@@ -456,6 +456,7 @@ function forms() {
 		setrating(block, linew);
 	});
 	$('.rating.edit .star').click(function (event) {
+		event.preventDefault();
 		var block = $(this).parents('.rating');
 		var re = $(this).index() + 1;
 		block.find('input').val(re);
@@ -747,8 +748,8 @@ function searchselectreset() {
 		}
 	});
 }
-$('.header-top__btn').click(function () {
-	$('.header-top__input').toggleClass('visible');
+$('.header-top__btn-icon').click(function () {
+	$('.header-top__form, .header-top__btn').toggleClass('visible');
 });
 function ibg() {
 	$.each($('.ibg'), function (index, val) {
