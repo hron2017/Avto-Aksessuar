@@ -9,6 +9,7 @@
 .header-container {
   max-width: 1208px;
 }
+
 .header-top {
   position: relative;
   display: flex;
@@ -17,26 +18,31 @@
   padding-bottom: 16px;
   border-bottom: 1px solid #595959;
   overflow: hidden;
+
   &__form {
     position: absolute;
     max-width: 270px;
     width: 100%;
     right: -250%;
     @include anim(0.5s, 0s);
+
     &.visible {
       position: absolute;
       right: 0;
     }
   }
+
   &__row {
     position: relative;
   }
+
   &__input {
     padding: 4px 20px 5px 10px;
     border: 1px solid #ff3448;
     background-color: #303030;
     color: #fff;
   }
+
   &__btn {
     @include button-reset;
     color: #fff;
@@ -45,6 +51,7 @@
     top: 50%;
     transform: translateY(-50%);
   }
+
   &__btn-icon {
     font-size: 25px;
     color: #fff;
@@ -57,6 +64,7 @@
     }
   }
 }
+
 .users {
   &__list {
     @include flexbox();
@@ -79,9 +87,11 @@
       margin-right: 15px;
       font-size: 12px;
     }
+
     &:hover {
       color: #b12b38;
     }
+
     &:before {
       position: absolute;
       top: 0;
@@ -89,16 +99,19 @@
       height: 100%;
       font-family: "FontAwesome";
     }
+
     &.account {
       &:before {
         content: "\f406";
       }
     }
+
     &.cart {
       &:before {
         content: "\f07a";
       }
     }
+
     &.checkout {
       &:before {
         content: "\f058";
@@ -106,10 +119,12 @@
     }
   }
 }
+
 .header-body {
   padding: 15px 0;
   display: flex;
   justify-content: space-between;
+
   &__nav {
     display: flex;
     justify-content: space-between;
@@ -128,7 +143,9 @@
     @media (max-width: $md4+px) {
       padding: 0 10px;
     }
+
     &:hover {
+
       i,
       span {
         color: #b12b38;
@@ -140,10 +157,12 @@
         display: none;
       }
     }
+
     &:last-child {
       border-right: none;
       padding-right: 0;
     }
+
     span {
       color: #ffffff;
       font-family: Lato;
@@ -157,17 +176,21 @@
       @media (max-width: $md4+px) {
         font-size: 8px;
       }
+
       @media (max-width: 350px) {
         font-size: 6px;
       }
     }
+
     i {
       font-size: 25px;
       color: #ff3448;
+
       @media (max-width: $md4+px) {
         font-size: 17px;
       }
     }
+
     .phone {
       color: #ffffff;
       font-family: Lato;
@@ -177,6 +200,7 @@
       letter-spacing: 1px;
       position: relative;
       padding-left: 34px;
+
       &:before {
         content: "\f3cd";
         position: absolute;
@@ -186,7 +210,8 @@
         font-family: "FontAwesome";
         color: #ff3448;
       }
-      + span {
+
+      +span {
         color: #a2a2a2;
         font-family: Lato;
         font-size: 14px;
@@ -198,15 +223,18 @@
     }
   }
 }
+
 .brend-name {
   font-family: Lato;
   font-size: 15px;
   font-weight: normal;
   text-transform: uppercase;
   color: #ffffff;
+
   @media (max-width: $md4+px) {
     font-size: 12px;
   }
+
   a {
     display: block;
     text-transform: initial;
@@ -214,6 +242,7 @@
     font-family: "Lato";
     font-size: 45px;
     font-weight: 400;
+
     span {
       color: #ff3448;
     }
@@ -223,6 +252,7 @@
     }
   }
 }
+
 .header-nav {
   background-color: #030303;
   padding: 26px 0px 18px 27px;
@@ -231,12 +261,13 @@
   left: 0;
   width: 100%;
 
-  @media (max-width: $md3+px) {
-  }
+  @media (max-width: $md3+px) {}
+
   @media (max-width: $md4+px) {
     padding: 14px 0px 8px 10px;
   }
 }
+
 .nav {
   &__list {
     @include flexbox();
@@ -244,12 +275,11 @@
 
   &__item {
     margin-right: 40px;
-    &:last-child {
-      margin-right: 0;
-    }
+
     @media (max-width: $md3+px) {
       margin-right: 20px;
     }
+
     @media (max-width: $md4+px) {
       margin-right: 9px;
     }
@@ -272,78 +302,9 @@
     @media (max-width: $md3+px) {
       font-size: 11px;
     }
+
     @media (max-width: $md4+px) {
       font-size: 8px;
     }
   }
 }
-
-//====================================================================================================
-/*
-\f3cd - телефон
-\f058 - check
-\f406 - account
-\f002, <i class="fas fa-search"></i> - поиск
-\f07a, <i class="fas fa-shopping-cart"></i>
-\f005, <i class="fas fa-star"></i> - звезда
-\f1b9, <i class="fas fa-car"></i>
-
-
-f0e0
-<i class="fas fa-envelope"></i> - конверт
-
-f879
-<i class="fas fa-phone-alt"></i> - трубка телефона
-
-f3c5
-<i class="fas fa-map-marker-alt"></i> - локация
-
-f017
-<i class="far fa-clock"></i> - часы
-
-
-
-
-СОЦСЕТИ
-
-f39e
-<i class="fab fa-facebook-f"></i>
-
-f099
-<i class="fab fa-twitter"></i>
-
-f0d5
-<i class="fab fa-google-plus-g"></i>
-
-f231
-<i class="fab fa-pinterest-p"></i>
-
-f16d
-<i class="fab fa-instagram"></i>
-
-
-
-
-*/
-/*
-	.header-menu__icon{
-		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width:30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
-			&:first-child{top: 0px;}
-			&:last-child{top: auto;bottom: 0px;}
-		}
-		&.active{
-			span{@include scale(0);
-				&:first-child{@include rotate(-45deg);top: 8px;}
-				&:last-child{@include rotate(45deg);bottom: 8px;}
-			}
-		}
-	}
-*/
